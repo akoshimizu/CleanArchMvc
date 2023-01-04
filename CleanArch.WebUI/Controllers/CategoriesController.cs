@@ -70,12 +70,10 @@ namespace CleanArch.WebUI.Controllers
             return View(categoryDto);
         }
 
-        [Authorize(Roles ="Admin")]
+        
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            if (id == null) return NotFound();
-
             var catetoryDto = await _categoryService.GetById(id);
 
             if (catetoryDto == null) return NotFound();

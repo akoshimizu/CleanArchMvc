@@ -3,10 +3,7 @@ using CleanArch.Application.DTOs;
 using CleanArch.Application.Interfaces;
 using CleanArch.Domain.Entities;
 using CleanArch.Domain.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CleanArch.Application.Services
@@ -45,7 +42,7 @@ namespace CleanArch.Application.Services
             await _categoryRepository.Update(categoryEntity);
         }
 
-        public async Task Remove(int? id)
+        public async Task Remove(int id)
         {
             var categoryEntity = _categoryRepository.GetById(id).Result;
             await _categoryRepository.Remove(categoryEntity);

@@ -13,6 +13,6 @@ namespace CleanArch.Application.Interfaces
         Task<CategoryDTO> GetById(int id);
         Task Add(CategoryDTO categoryDto);
         Task Update(CategoryDTO categoryDto);
-        Task Remove(int? id);
+        Task Remove(int id);
     }
 }
