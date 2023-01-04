@@ -43,7 +43,7 @@ namespace CleanArch.WebUI.Controllers
         [HttpGet()]
         public async Task<IActionResult> Edit(int id)
         {
-            if (id == null) return NotFound();
+            //if (id == null) return NotFound();
 
             var catetoryDto = await _categoryService.GetById(id);
             
@@ -91,7 +91,7 @@ namespace CleanArch.WebUI.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            if (id == null) return NotFound();
+            //if (id == null) return NotFound();
 
             var catetoryDto = await _categoryService.GetById(id);
 
